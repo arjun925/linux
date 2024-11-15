@@ -1,3 +1,10 @@
-#! /bin/bash
-read name
-echo "hello, $name"
+#!/bin/bash
+echo "Enter a path:"
+read path
+if [ -d "$path" ]; then
+    echo "The path '$path' is a directory."
+elif [ -f "$path" ]; then
+    echo "The path '$path' is a file."
+else
+	echo "somthing else"
+fi	
